@@ -6,6 +6,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Belajar Web</name>
+    
+    <modules>
+        <module>application-config</module>
+        <module>domain-model</module>
+    </modules>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
@@ -13,9 +19,10 @@
         <springframework.version>4.2.4.RELEASE</springframework.version>
         <springframework-data.version>1.9.2.RELEASE</springframework-data.version>
         <springframework-security.version>4.0.3.RELEASE</springframework-security.version>
-        <hibernate.version>4.3.10.FINAL</hibernate.version>
+        <hibernate.version>4.2.6.FINAL</hibernate.version>
         <hibernate-validator.version>5.0.1.FINAL</hibernate-validator.version>
         <servlet.version>3.1.0</servlet.version>
+        <commons-dbcp.version>1.4</commons-dbcp.version>
     
         <jodatime.version>2.9.1</jodatime.version>
         <jadira.version>3.2.0.GA</jadira.version>
@@ -64,4 +71,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>
