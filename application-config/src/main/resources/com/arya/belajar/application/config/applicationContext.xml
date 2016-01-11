@@ -9,28 +9,29 @@
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 ">
-    <context:property-placeholder location="classpath*=jdbc.properties" />
+    <context:property-placeholder location="classpath*:jdbc.properties" />
     <tx:annotation-driven />
     
     <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource" 
-    p:driver = "${jdbc.driver}" 
+    p:driverClassName = "${jdbc.driver}" 
     p:url = "${jdbc.url}"
     p:username="${jdbc.username}"
     p:password="${jdbc.password}"/>
     
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerManagerFactory">
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="datasource"/>
-        <property name="packagesToScan" value="com.arya.belajar.domain" />
-        <property name="jpaVendorAdapater">
+        <property name="packagesToScan" value="com.arya.belajar.domain.model" />
+        <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="databasePlatform" value="${hibernate.dialect}" />
                 <property name="showSql" value="true"/>
-                <property name="generateDdl" value="false">
+                <property name="generateDdl" value="false"/>
             </bean>
         </property>
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.format_sql" >true</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
             </props>
         </property>
     </bean>

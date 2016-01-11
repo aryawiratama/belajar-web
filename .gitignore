@@ -1,2 +1,4 @@
 /application-config/target/
 nb-configuration.xml
+/domain-model/target/
+/business-process/target/

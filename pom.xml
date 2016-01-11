@@ -10,6 +10,7 @@
     <modules>
         <module>application-config</module>
         <module>domain-model</module>
+        <module>business-process</module>
     </modules>
     
     <properties>
