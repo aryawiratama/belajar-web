@@ -2,3 +2,5 @@
 nb-configuration.xml
 /domain-model/target/
 /business-process/target/
+/view/target/
+/view/src/main/webapp/META-INF/

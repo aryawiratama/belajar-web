@@ -11,7 +11,8 @@
         <module>application-config</module>
         <module>domain-model</module>
         <module>business-process</module>
-    </modules>
+        <module>view</module>
+  </modules>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,6 +24,7 @@
         <hibernate.version>4.2.6.FINAL</hibernate.version>
         <hibernate-validator.version>5.0.1.FINAL</hibernate-validator.version>
         <servlet.version>3.1.0</servlet.version>
+        <jsp-api.version>2.3.1</jsp-api.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
     
         <jodatime.version>2.9.1</jodatime.version>
