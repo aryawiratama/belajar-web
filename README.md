@@ -1,4 +1,4 @@
-# Belajar Spring MVC #
+# Template Belajar Web #
 
 ## Project Modules ##
 1. aplication-config : Konfigurasi aplikasi
