@@ -1,5 +1,5 @@
-# Template Belajar Web #
-
+# Template Belajar Web 
+Ini adalah template yang saya gunakan untuk belajar java web programming. Template ini akan saya update terus sebagai dokumentasi pribadi dalam belajar java.
 ## Project Modules ##
 1. aplication-config : Konfigurasi aplikasi
 2. domain-model : kelas entity 
