@@ -6,7 +6,10 @@
 
 package com.arya.belajar.view.controller;
 
+import com.arya.belajar.domain.service.ItemService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,8 +21,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "customer")
 public class CustomerController {
     
+    @Autowired
+    private ItemService itemService;
+    
     @RequestMapping(value = "form", method = RequestMethod.GET)
-    public String customerForm(){
+    public String customerForm(Model model){
+        
         return "customer-form";
     }
 }

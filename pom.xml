@@ -34,6 +34,10 @@
         
         <junit.version>4.12</junit.version>
         
+        <jetty.version>9.2.14.v20151106</jetty.version>
+        <server-context-path>/</server-context-path>
+        <server-port>9999</server-port>
+        
         <db.driver>com.mysql.jdbc.Driver</db.driver>
         <db.url><![CDATA[jdbc:mysql://localhost/belajar?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull]]></db.url>
         <db.username>root</db.username>
