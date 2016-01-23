@@ -29,7 +29,7 @@
     
         <jodatime.version>2.9.1</jodatime.version>
         <jadira.version>3.2.0.GA</jadira.version>
-        
+        <joda-jsptag.version>1.1.1</joda-jsptag.version>
         <mysql.version>5.1.38</mysql.version>
         
         <junit.version>4.12</junit.version>

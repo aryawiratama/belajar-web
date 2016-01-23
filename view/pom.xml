@@ -65,6 +65,12 @@
             <artifactId>spring-security-config</artifactId>
             <version>${springframework-security.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time-jsptags</artifactId>
+            <version>${joda-jsptag.version}</version>
+        </dependency>
     </dependencies>
     
     <build>
