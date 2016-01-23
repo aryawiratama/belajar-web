@@ -12,6 +12,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/css/bootstrap.min.css" />" >
+        <script src="<c:url value="/resources/js/jquery-1.12.0.min.js" />"></script>
         <title>Item Form</title>
     </head>
     <body>
@@ -48,5 +50,19 @@
                 </tr>
             </table>
         </form>
+            
+            <div class="container">
+                <div class="form-inline">
+                    <label>test</label>
+                    <input type="text" name="test">
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-inline">
+                    <label>test</label>
+                    <input type="text" name="test">
+                </div>
+            </div>
     </body>
+    <script src="<c:url value="/resources/script/item-script.js" />"></script>
 </html>
