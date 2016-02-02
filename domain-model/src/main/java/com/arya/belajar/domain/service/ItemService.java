@@ -8,11 +8,13 @@ package com.arya.belajar.domain.service;
 
 import com.arya.belajar.domain.model.Item;
 import java.util.List;
+import net.bull.javamelody.MonitoredWithSpring;
 
 /**
  *
  * @author Artha
  */
+@MonitoredWithSpring
 public interface ItemService {
     
     public Item saveItem(Item item);

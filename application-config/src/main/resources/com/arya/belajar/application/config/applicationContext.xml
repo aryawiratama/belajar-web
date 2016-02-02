@@ -42,4 +42,18 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"></bean>
         </property>
     </bean>
+    
+    <!-- for application monitoring -->
+    <bean id="sessionFactory" factory-bean="entityManagerFactory" factory-method="getSessionFactory" />
+    <bean id="hibernateStatisticMBean" class="org.hibernate.jmx.StatisticsService" >
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="mBeanExporter" class="org.springframework.jmx.export.MBeanExporter">
+        <property name="beans">
+            <map>
+                <entry key="SpringBeans:name=hibernateStatisticMBean" value-ref="hibernateStatisticMBean"/>
+            </map>
+        </property>
+    </bean>
+    <context:mbean-server/>
 </beans>
