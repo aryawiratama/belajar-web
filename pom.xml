@@ -21,8 +21,8 @@
         <springframework.version>4.2.4.RELEASE</springframework.version>
         <springframework-data.version>1.9.2.RELEASE</springframework-data.version>
         <springframework-security.version>4.0.3.RELEASE</springframework-security.version>
-        <hibernate.version>4.2.6.FINAL</hibernate.version>
-        <hibernate-validator.version>5.0.1.FINAL</hibernate-validator.version>
+        <hibernate.version>4.2.6.Final</hibernate.version>
+        <hibernate-validator.version>5.0.1.Final</hibernate-validator.version>
         <servlet.version>3.1.0</servlet.version>
         <jsp-api.version>2.3.1</jsp-api.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>

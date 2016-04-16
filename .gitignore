@@ -4,3 +4,4 @@ nb-configuration.xml
 /business-process/target/
 /view/target/
 /view/src/main/webapp/META-INF/
+nbactions.xml
