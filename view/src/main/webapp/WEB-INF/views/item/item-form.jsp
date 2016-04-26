@@ -12,57 +12,76 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/css/bootstrap.min.css" />" >
+        <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css" />" >
         <script src="<c:url value="/resources/js/jquery-1.12.0.min.js" />"></script>
         <title>Item Form</title>
     </head>
     <body>
-        <h1>Input Item</h1>
-        <form action="<c:url value="/item/save" />" method="POST">
-            <table>
-                <tr>
-                    <td><label for="code">Code</label></td>
-                    <td><input type="text" name="code"></td>
-                </tr>
-                <tr>
-                    <td><label for="name">Name</label></td>
-                    <td><input type="text" name="name"></td>
-                </tr>
-                <tr>
-                    <td><label for="price">Price</label></td>
-                    <td><input type="text" name="price"></td>
-                </tr>
-                <tr>
-                    <td><label for="cost">Cost</label></td>
-                    <td><input type="text" name="cost"></td>
-                </tr>
-                <tr>
-                    <td><label for="quantity">Quantity</label></td>
-                    <td><input type="text" name="quantity"></td>
-                </tr>
-                <tr>
-                    <td><label for="expiredDate">Expired Date</label></td>
-                    <td><input type="text" name="expiredDateParam"></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td><input type="submit" value="Save"></td>
-                </tr>
-            </table>
-        </form>
-            
-            <div class="container">
-                <div class="form-inline">
-                    <label>test</label>
-                    <input type="text" name="test">
+        
+        <div class="container">
+            <form action="<c:url value="/item/save" />" method="POST">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Code</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="code" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="form-inline">
-                    <label>test</label>
-                    <input type="text" name="test">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Name</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="name" />
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Price</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="price" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Cost</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="cost" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Stock</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="stock" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">ExpiredDate</label>
+                        <div class="col-md-8">
+                            <span class="input-group">
+                                <input type="text" class="form-control datepicker" name="expiredDateParam" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">&nbsp;</label>
+                        <div class="col-md-4">
+                            <span class="input-group">
+                                <input type="submit" class="btn btn-primary" value="Save" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
     <script src="<c:url value="/resources/script/item-script.js" />"></script>
 </html>

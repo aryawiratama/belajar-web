@@ -11,11 +11,14 @@ import com.arya.belajar.domain.service.ItemService;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -38,5 +41,11 @@ public class ItemController {
         item.setExpiredDate(expiredDate);
         itemService.saveItem(item);
         return "redirect:/item/form";
+    }
+    
+    @RequestMapping(value = "/api/name", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<String> testWebService(@RequestParam("name")String name){
+        return new ResponseEntity<String>(name, HttpStatus.CREATED);
     }
 }
