@@ -8,6 +8,7 @@ package com.arya.belajar.view.controller;
 
 import com.arya.belajar.domain.model.Item;
 import com.arya.belajar.domain.service.ItemService;
+import java.util.List;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,8 @@ public class ItemController {
     
     @RequestMapping(value = "form", method = RequestMethod.GET)
     public String itemForm(Model model){
+        List<Item> items = itemService.findItems();
+        model.addAttribute("items", items);
         return "item/item-form";
     }
     @RequestMapping(value = "save",method = RequestMethod.POST)

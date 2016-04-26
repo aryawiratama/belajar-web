@@ -56,7 +56,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">Stock</label>
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="stock" />
+                            <input type="text" class="form-control" name="quantity" />
                         </div>
                     </div>
                 </div>
@@ -75,12 +75,58 @@
                         <label class="control-label col-md-2">&nbsp;</label>
                         <div class="col-md-4">
                             <span class="input-group">
+                                <input type="hidden" class="btn btn-primary" value="${_csrf.token}" name="${_csrf.parameterName}" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">&nbsp;</label>
+                        <div class="col-md-4">
+                            <span class="input-group">
                                 <input type="submit" class="btn btn-primary" value="Save" />
                             </span>
                         </div>
                     </div>
                 </div>
             </form>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Cost</th>
+                            <th>Stock</th>
+                            <th>Expired Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:choose>
+                            <c:when test="${not empty items}">
+                                <c:forEach var="item" items="${items}">
+                                    <tr>
+                                        <td>${item.code}</td>
+                                        <td>${item.name}</td>
+                                        <td>${item.price}</td>
+                                        <td>${item.cost}</td>
+                                        <td>${item.quantity}</td>
+                                        <td>${item.expiredDate}</td>
+                                        <td>
+                                            <a class="btn btn-success"><i class="glyphicon glyphicon-edit"></i> Edit</a>
+                                            <a class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</a>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </c:when>
+                            <c:otherwise>
+                                <tr><td colspan="6">No Data Available</td></tr>
+                            </c:otherwise>
+                        </c:choose>
+                    </tbody>
+                </table>
         </div>
     </body>
     <script src="<c:url value="/resources/script/item-script.js" />"></script>

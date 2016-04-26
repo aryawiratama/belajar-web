@@ -44,7 +44,7 @@ public class Item {
     private String name;
     
     @Column(name = "quantity")
-    private BigDecimal quantitiy;
+    private BigDecimal quantity;
     
     @Column(name = "price", columnDefinition = "DECIMAL (19,2) UNSIGNED")
     @Min(0)
@@ -83,12 +83,12 @@ public class Item {
         this.name = name;
     }
 
-    public BigDecimal getQuantitiy() {
-        return quantitiy;
+    public BigDecimal getQuantity() {
+        return quantity;
     }
 
-    public void setQuantitiy(BigDecimal quantitiy) {
-        this.quantitiy = quantitiy;
+    public void setQuantity(BigDecimal quantity) {
+        this.quantity = quantity;
     }
 
     public BigDecimal getPrice() {
