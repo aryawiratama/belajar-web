@@ -9,7 +9,7 @@
 ">
     <http>
         <intercept-url pattern="/**" access="hasRole('USER')"/>
-        <form-login />
+        <form-login default-target-url="/item/form" always-use-default-target="true"/>
         <logout />
     </http>
     
