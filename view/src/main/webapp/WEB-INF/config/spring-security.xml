@@ -7,9 +7,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
 ">
+    <http pattern="/login" security="none" />
+    <http pattern="/resources/**" security="none" />
     <http>
         <intercept-url pattern="/**" access="hasRole('USER')"/>
-        <form-login default-target-url="/item/form" always-use-default-target="true"/>
+        <intercept-url pattern="/login"/>
+        <form-login login-page="/login" default-target-url="/item/form" always-use-default-target="true"/>
         <logout />
     </http>
     
