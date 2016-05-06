@@ -15,7 +15,10 @@
     <body>
         <div class="container">
             <div class="col-md-4 col-md-offset-3">
-                <form>
+                <c:if test="${error != null}">
+                    <div class="alert alert-danger">Invalid Username & Password</div>
+                </c:if>
+                    <form name="f" action="<c:url value="/login" />" method="post">
                     <div class="form-inline">
                         <div class="form-group">
                             <label class="control-label"><h3>Login Page</h3></label>
@@ -24,19 +27,19 @@
                     <div class="form-inline">
                         <div class="form-group">
                             <label class="control-label">Username</label>
-                            <input type="text" name="user" class="form-control" />
+                            <input type="text" name="username" class="form-control" />
                         </div>
                     </div>
                     <div class="form-inline">
                         <div class="form-group">
                             <label class="control-label">Password</label>
-                            <input type="password" name="passord" class="form-control" />
+                            <input type="password" name="password" class="form-control" />
                         </div>
                     </div>
                     <div class="form-inline">
                         <div class="form-group">
                             <label class="control-label">&nbsp;</label>
-                            <input type="submit" class="btn btn-primary" value="Login"/>
+                            <input type="submit" class="btn btn-primary" name="submit" value="Login"/>
                         </div>
                     </div>
                 </form>
