@@ -7,7 +7,9 @@
 package com.arya.belajar.view.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -18,7 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
     
     @RequestMapping("")
-    public String login(){
+    public String login(@RequestParam(value = "error", required = false) String error, Model model){
+        model.addAttribute("error", error);
         return "login/login";
     }
 }

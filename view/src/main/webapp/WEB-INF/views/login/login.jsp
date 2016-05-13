@@ -18,7 +18,7 @@
                 <c:if test="${error != null}">
                     <div class="alert alert-danger">Invalid Username & Password</div>
                 </c:if>
-                    <form name="f" action="<c:url value="/login" />" method="post">
+                    <form action="<c:url value="/login" />" method="post">
                     <div class="form-inline">
                         <div class="form-group">
                             <label class="control-label"><h3>Login Page</h3></label>
